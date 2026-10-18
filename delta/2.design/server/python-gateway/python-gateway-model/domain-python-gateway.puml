@@ -1,0 +1,10 @@
+@startuml
+title domain-python-gateway（TBD）
+class PythonJobSubmitCommand {
+  inputLasPath : String
+}
+class PythonJobStatusView {
+  externalJobId : String
+  phase : String
+}
+@enduml

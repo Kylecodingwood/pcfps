@@ -1,0 +1,7 @@
+@startuml
+title service-job（TBD）
+interface JobService {
+  + createTask()
+  + refreshStatusFromPython()
+}
+@enduml

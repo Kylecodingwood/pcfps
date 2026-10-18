@@ -1,0 +1,21 @@
+# Backend
+backend/target/
+backend/.idea/
+*.iml
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+
+# ML models (regenerate via python_rf_semantic.train_cli)
+*.joblib
+
+# Local runtime / experiment data
+outputfile/
+terra_las/
+
+# Source package output
+dist/

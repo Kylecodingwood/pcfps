@@ -1,0 +1,6 @@
+@startuml
+title service-auth（TBD）
+interface AuthService {
+  + login()
+}
+@enduml

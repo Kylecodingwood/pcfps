@@ -1,0 +1,8 @@
+@startuml
+title pointcloud-pipeline 用例图（TBD）
+left to right direction
+actor User as user
+rectangle System {
+}
+user --> System : TBD
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+title service-python-gateway（TBD）
+interface PythonGatewayService {
+  + submitJob()
+  + fetchStatus()
+}
+@enduml

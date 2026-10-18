@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: pcfps-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/pcfps}
+    username: ${SPRING_DATASOURCE_USERNAME:pcfps}
+    password: ${SPRING_DATASOURCE_PASSWORD:pcfps}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:dev-secret-change-me-min-32-chars-long!!}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+
+pcfps:
+  # Default: repo root `outputfile/` when JVM cwd is `backend/` (e.g. mvn spring-boot:run from backend). Override with OUTPUT_ROOT if needed.
+  output-root: "${OUTPUT_ROOT:${user.dir}/../outputfile}"
+  filter-max-concurrent-running: ${FILTER_MAX_CONCURRENT_RUNNING:1}
+  python:
+    base-url: ${PYTHON_SERVICE_BASE_URL:http://127.0.0.1:8000}
+  mock-python:
+    succeed-after-ticks: ${MOCK_PYTHON_SUCCEED_AFTER_TICKS:3}
+  preview:
+    max-points-default: ${PCFPS_PREVIEW_MAX_POINTS:180000}
+    max-file-bytes: ${PCFPS_PREVIEW_MAX_FILE_BYTES:100000000}
+    python-command: ${PCFPS_PREVIEW_PYTHON:${user.dir}/../.venv/bin/python}
+    las-preview-enabled: ${PCFPS_PREVIEW_LAS_ENABLED:true}
+    process-timeout-seconds: ${PCFPS_PREVIEW_PROCESS_TIMEOUT_SEC:600}
+  ml-rf-semantic:
+    model-dir: ${PCFPS_ML_RF_MODEL_DIR:${user.dir}/../terra_las/rf_model_house_language}
+
+logging:
+  pattern:
+    level: "%5p [%X{traceId:-}]"

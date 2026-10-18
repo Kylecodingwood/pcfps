@@ -1,0 +1,7 @@
+@startuml
+title integration-python 用例图（TBD）
+actor JavaBackend as java
+rectangle PythonService {
+}
+java --> PythonService : REST
+@enduml

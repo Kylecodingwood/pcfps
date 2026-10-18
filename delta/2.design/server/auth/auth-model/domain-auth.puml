@@ -1,0 +1,7 @@
+@startuml
+title domain-auth（TBD）
+class UserAccount {
+  id : UUID
+  username : String
+}
+@enduml

@@ -1,0 +1,15 @@
+workspace:
+  id: pcfps-pointcloud-filter
+  name: 点云滤波自动化系统 Delta Workspace
+  version: 0.1
+
+  scope:
+    - id: Requirement
+      type: Requirement
+      path: 1.req/
+    - id: Design
+      type: Design
+      path: 2.design/
+    - id: Coding
+      type: Coding
+      path: 3.coding/

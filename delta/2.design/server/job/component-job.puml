@@ -1,0 +1,10 @@
+@startuml
+title job 域组件（TBD）
+[JobController] as JC
+[JobService] as JS
+[Scheduler] as SCH
+[PythonGatewayClient] as PG
+JC --> JS
+SCH --> JS
+JS --> PG
+@enduml

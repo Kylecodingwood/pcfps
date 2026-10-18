@@ -1,0 +1,13 @@
+@startuml
+title domain-job（TBD）
+enum TaskStatus {
+  PENDING
+  RUNNING
+  SUCCEEDED
+  FAILED
+}
+class FilterTask {
+  id : UUID
+  status : TaskStatus
+}
+@enduml

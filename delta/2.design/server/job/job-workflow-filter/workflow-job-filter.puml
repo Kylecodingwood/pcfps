@@ -1,0 +1,9 @@
+@startuml
+title workflow-job-filter（与 requirements v0.2 对齐）
+[*] --> Pending : createTask
+Pending --> Running : schedulerDispatch\nsubmitPythonOk
+Running --> Succeeded : pythonDone\nfilesRegistered
+Running --> Failed : python4xx\nor fatalError
+Running --> Failed : timeoutOrRetriesExhausted
+Pending --> Failed : validationFailed
+@enduml

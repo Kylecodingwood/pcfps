@@ -1,0 +1,7 @@
+@startuml
+title service-file-metadata（TBD）
+interface FileMetaService {
+  + registerAsset()
+  + listByTask()
+}
+@enduml

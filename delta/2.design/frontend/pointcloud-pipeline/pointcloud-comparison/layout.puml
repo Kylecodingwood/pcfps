@@ -1,0 +1,8 @@
+@startuml
+title pointcloud-comparison layout（TBD）
+rectangle Root {
+  rectangle Toolbar
+  rectangle LeftViewport
+  rectangle RightViewport
+}
+@enduml

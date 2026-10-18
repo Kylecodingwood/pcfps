@@ -1,0 +1,6 @@
+@startuml
+title file-metadata 域组件（TBD）
+[FileMetaController] as FC
+[FileMetaService] as FS
+FC --> FS
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+title python-gateway 域组件（TBD）
+[PythonGatewayClient] as PGC
+[RestTemplate_or_WebClient] as HTTP
+PGC --> HTTP
+HTTP ..> Python : REST
+@enduml

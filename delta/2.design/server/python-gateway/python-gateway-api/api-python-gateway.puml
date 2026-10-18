@@ -1,0 +1,6 @@
+@startuml
+title api-python-gateway（TBD）
+note as N
+  多为内部 Facade；\n非浏览器 API
+end note
+@enduml

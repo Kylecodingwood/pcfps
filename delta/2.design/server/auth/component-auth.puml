@@ -1,0 +1,8 @@
+@startuml
+title auth 域组件（TBD）
+package Auth {
+  [AuthController] as AC
+  [AuthService] as AS
+}
+AC --> AS
+@enduml

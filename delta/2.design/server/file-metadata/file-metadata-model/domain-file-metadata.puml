@@ -1,0 +1,7 @@
+@startuml
+title domain-file-metadata（TBD）
+class FileAsset {
+  id : UUID
+  logicalPath : String
+}
+@enduml

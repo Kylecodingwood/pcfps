@@ -1,0 +1,12 @@
+@startuml
+title integration-python 异步提交与轮询（requirements v0.2）
+participant "SpringBoot" as java
+participant "PythonREST" as py
+java -> py : POST submitJob
+py --> java : 202 accepted + externalJobId
+loop poll until terminal
+  java -> py : GET status
+  py --> java : running / succeeded / failed
+end
+java -> java : update PG task + file-metadata
+@enduml

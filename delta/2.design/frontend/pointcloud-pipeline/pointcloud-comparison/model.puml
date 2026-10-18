@@ -1,0 +1,7 @@
+@startuml
+!include component.puml
+title pointcloud-comparison model（TBD）
+class PageViewModel {
+  taskId : String
+}
+@enduml

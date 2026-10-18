@@ -1,0 +1,7 @@
+@startuml
+title integration-python 契约视图（TBD）
+class ExternalJobPayload {
+  jobId : String
+  note : String
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+title pointcloud-pipeline 实体（TBD）
+class PlaceholderEntity {
+  id : UUID
+  note : String
+}
+@enduml
